@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazon para vanessa</title>
+    <link rel="stylesheet" href="Bottun.css">
+    
+</head>
+<style>
+     body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        background: #0b1522;
+     }
+     .heart{
+        height: 150px;
+        width: 150px;
+        background: red;
+        position: relative;
+        transform: rotate(45deg);
+        box-shadow: -20 20px 150px #f20044;
+        animation: palpitar 0.5s linear infinite alternate;
+    }
+    @keyframes palpitar{
+        0%{transform: rotate(45deg) scale(1.10);}
+        88%{transform: rotate(45deg) scale(1.0);}
+        100%{transform: rotate(45deg) scale(0.8);}
+    }
+     .heart::before{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background: red;
+        right: 50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #f20044;
+    }
+    .heart::after{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background: red;
+        top: -50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #f20044;
+    }
+ </style>
+     <body onclick="playaudio()">
+        <div class="heart"</div>
+        <section>
+            <audio id="perfecto.love">
+                <source src="Perfecto.love.mp3" type="audio/mpeg">
+              </audio>
+              <section>
+                <script>
+                  function playaudio(){
+                    document.getElementById("perfecto.love").play();
+                  }
+                </script>
+        </section>
+  </body>
+</html>
